@@ -1,0 +1,206 @@
+/* ==========================================================================
+   WPUCS Design System — Colors & Type tokens
+   Source: https://wpucs.com — synthesized from live site
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* ---------- BRAND PALETTE — 2026 trend refresh ----------------------------
+     Direction: earthy, desaturated, naturalistic. Matcha-sage primary,
+     warm off-black secondary, butter-yellow accent. Ditches the punchy
+     SaaS-green for something closer to Pantone Mocha-Mousse / Aura-Indigo
+     trend territory.
+     ------------------------------------------------------------------------- */
+
+  /* Primary — Matcha / sage (replaces SaaS green) */
+  --brand-green-50:  #F1F5EC;
+  --brand-green-100: #DDE6D0;
+  --brand-green-200: #BFCEAD;
+  --brand-green-300: #9DB286;
+  --brand-green-400: #7E9868;
+  --brand-green-500: #6B8755;   /* primary — matcha sage */
+  --brand-green-600: #556E44;   /* primary-hover */
+  --brand-green-700: #3F5333;
+  --brand-green-800: #2C3B23;
+
+  /* Secondary — Warm off-black with subtle plum undertone */
+  --brand-navy-50:   #F3F1EE;
+  --brand-navy-100:  #DAD5CD;
+  --brand-navy-200:  #B4ABA0;
+  --brand-navy-400:  #6E6356;
+  --brand-navy-600:  #3F362D;
+  --brand-navy-800:  #2A231C;   /* warm off-black, headings */
+  --brand-navy-900:  #1A1510;   /* footer / darkest */
+
+  /* Accent — Soft butter (warmer than the old hi-vis yellow) */
+  --brand-yellow-300: #F4E4B6;
+  --brand-yellow-500: #E8C982;  /* butter / save-X% badge */
+  --brand-yellow-700: #B0944D;
+
+  /* Tertiary trend hue — Terracotta / Mocha Mousse (use sparingly) */
+  --brand-clay-300: #E2B49A;
+  --brand-clay-500: #B8755A;
+  --brand-clay-700: #7E4A36;
+
+  /* ---------- NEUTRALS ------------------------------------------------------- */
+  --cream-50:  #FAF7F2;   /* page background — warm bone */
+  --cream-100: #F2EDE5;
+  --cream-200: #E6DFD3;
+  --line-100:  rgba(42, 35, 28, 0.06);
+  --line-200:  rgba(42, 35, 28, 0.10);
+  --line-300:  rgba(42, 35, 28, 0.16);
+
+  --white:     #FFFFFF;
+  --gray-50:   #F8FAFC;
+  --gray-100:  #EEF2F6;
+  --gray-200:  #E2E8F0;
+  --gray-400:  #94A3B8;
+  --gray-600:  #475569;
+  --gray-800:  #1F2937;
+
+  /* ---------- SEMANTIC FG/BG ------------------------------------------------- */
+  --bg-page:     var(--cream-50);
+  --bg-surface:  var(--white);
+  --bg-raised:   var(--white);
+  --bg-inverted: var(--brand-navy-900);
+  --bg-tint:     var(--brand-green-50);
+  --bg-cream:    var(--cream-100);
+
+  --fg-1: var(--brand-navy-800);     /* primary text on light, headings */
+  --fg-2: #3B4A6B;                    /* body text */
+  --fg-3: #6B7A95;                    /* secondary / meta */
+  --fg-4: #93A0B8;                    /* tertiary / placeholder */
+  --fg-on-dark:        #FFFFFF;
+  --fg-on-dark-muted:  rgba(255,255,255,0.72);
+  --fg-on-brand:       #FFFFFF;       /* on green */
+
+  --accent:        var(--brand-green-500);
+  --accent-hover:  var(--brand-green-600);
+  --accent-soft:   var(--brand-green-50);
+
+  /* status */
+  --success: var(--brand-green-500);
+  --warning: var(--brand-yellow-500);
+  --danger:  #E5484D;
+  --info:    #3E7BFA;
+
+  /* ---------- ELEVATION / BORDER -------------------------------------------- */
+  --radius-xs: 4px;
+  --radius-sm: 8px;       /* buttons, inputs */
+  --radius-md: 12px;
+  --radius-lg: 16px;      /* cards */
+  --radius-xl: 24px;      /* hero panels */
+  --radius-pill: 999px;
+
+  --border-1: 1px solid var(--line-100);
+  --border-2: 1px solid var(--line-200);
+  --border-strong: 1px solid var(--line-300);
+
+  --shadow-xs:  0 1px 2px rgba(42,35,28,0.06);
+  --shadow-sm:  0 2px 8px rgba(42,35,28,0.06);
+  --shadow-md:  0 8px 24px -6px rgba(42,35,28,0.10);
+  --shadow-lg:  0 16px 48px -12px rgba(42,35,28,0.14);
+  --shadow-xl:  0 32px 64px -20px rgba(42,35,28,0.20);
+  --shadow-green:  0 16px 48px -12px rgba(107,135,85,0.30);
+  --shadow-focus:  0 0 0 4px rgba(107,135,85,0.32);
+
+  /* ---------- SPACING (8px base) -------------------------------------------- */
+  --space-0: 0;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --space-10: 120px;
+
+  --container: 1240px;
+  --container-narrow: 960px;
+  --container-wide: 1360px;
+
+  /* ---------- TYPE — base --------------------------------------------------- */
+  --font-display: 'DM Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-body:    'DM Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
+
+  --fs-12: 12px;
+  --fs-13: 13px;
+  --fs-14: 14px;
+  --fs-15: 15px;
+  --fs-16: 16px;
+  --fs-18: 18px;
+  --fs-20: 20px;
+  --fs-24: 24px;
+  --fs-28: 28px;
+  --fs-32: 32px;
+  --fs-40: 40px;
+  --fs-48: 48px;
+  --fs-56: 56px;
+  --fs-64: 64px;
+  --fs-72: 72px;
+
+  --fw-regular: 400;
+  --fw-medium:  500;
+  --fw-semi:    600;
+  --fw-bold:    700;
+  --fw-black:   800;
+
+  --lh-tight: 1.1;
+  --lh-snug:  1.25;
+  --lh-normal: 1.5;
+  --lh-loose: 1.7;
+
+  --tracking-tight: -0.02em;
+  --tracking-snug:  -0.01em;
+  --tracking-wide:   0.04em;
+
+  /* ---------- TYPE — semantic roles ---------------------------------------- */
+  --h-display: var(--fw-bold) clamp(48px,5.5vw,72px)/1.05 var(--font-display);
+  --h1: var(--fw-bold) clamp(40px,4.5vw,56px)/1.08 var(--font-display);
+  --h2: var(--fw-bold) clamp(32px,3.4vw,44px)/1.12 var(--font-display);
+  --h3: var(--fw-semi) 28px/1.2 var(--font-display);
+  --h4: var(--fw-semi) 22px/1.3 var(--font-display);
+  --h5: var(--fw-semi) 18px/1.35 var(--font-display);
+  --h6: var(--fw-semi) 14px/1.3 var(--font-display);
+
+  --eyebrow: var(--fw-semi) 13px/1 var(--font-display);
+  --eyebrow-tracking: 0.08em;
+
+  --p-large: var(--fw-regular) 18px/1.65 var(--font-body);
+  --p:       var(--fw-regular) 16px/1.65 var(--font-body);
+  --p-small: var(--fw-regular) 14px/1.55 var(--font-body);
+  --meta:    var(--fw-medium) 13px/1.4 var(--font-body);
+
+  --code:    var(--fw-regular) 14px/1.55 var(--font-mono);
+
+  /* ---------- MOTION -------------------------------------------------------- */
+  --ease-out: cubic-bezier(.2,.7,.2,1);
+  --ease-in-out: cubic-bezier(.4,0,.2,1);
+  --dur-fast: 150ms;
+  --dur-base: 220ms;
+  --dur-slow: 320ms;
+}
+
+/* ==========================================================================
+   Element defaults — opt-in by adding class="ds-prose" or use individual vars
+   ========================================================================== */
+.ds-prose {
+  font: var(--p);
+  color: var(--fg-2);
+}
+.ds-prose h1 { font: var(--h1); color: var(--fg-1); letter-spacing: var(--tracking-snug); margin: 0 0 var(--space-5); }
+.ds-prose h2 { font: var(--h2); color: var(--fg-1); letter-spacing: var(--tracking-snug); margin: var(--space-7) 0 var(--space-4); }
+.ds-prose h3 { font: var(--h3); color: var(--fg-1); margin: var(--space-6) 0 var(--space-3); }
+.ds-prose h4 { font: var(--h4); color: var(--fg-1); margin: var(--space-5) 0 var(--space-3); }
+.ds-prose p  { margin: 0 0 var(--space-4); }
+.ds-prose code { font: var(--code); background: var(--gray-100); padding: 2px 6px; border-radius: var(--radius-xs); }
+.ds-prose .eyebrow {
+  font: var(--eyebrow);
+  letter-spacing: var(--eyebrow-tracking);
+  text-transform: uppercase;
+  color: var(--brand-green-600);
+}
