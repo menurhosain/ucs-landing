@@ -7,7 +7,7 @@ const Header = () => {
   }, []);
   const links = ['Templates', 'Features', 'Pricing', 'Reviews', 'Docs', 'Blog'];
   return (
-    <header style={{
+    <header className="header-main" style={{
       position: 'sticky', top: 0, zIndex: 50,
       background: scrolled ? 'rgba(250,251,247,.85)' : 'var(--bg-page)',
       backdropFilter: scrolled ? 'blur(12px)' : 'none',

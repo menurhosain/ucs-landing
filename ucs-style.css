@@ -1,0 +1,129 @@
+/* ── Header Layout ────────────────────────────────────────── */
+.header-main {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--bg-page);
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s var(--ease-out);
+}
+
+.header-main.scrolled {
+  background: rgba(250, 251, 247, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom-color: var(--line-100);
+}
+
+.header-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: height 0.2s var(--ease-out);
+}
+
+.header-inner.scrolled {
+  height: 64px;
+}
+
+/* ── Nav Links ────────────────────────────────────────────── */
+.header-nav {
+  display: flex;
+  gap: 28px;
+}
+
+.header-nav a {
+  font: 500 14px var(--font-display);
+  color: var(--fg-2);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.header-nav a:hover {
+  color: var(--fg-1);
+}
+
+/* ── Desktop Actions ──────────────────────────────────────── */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ── Hamburger Button ─────────────────────────────────────── */
+.header-hamburger {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--line-100);
+  border-radius: 8px;
+  padding: 7px 9px;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+  color: var(--fg-1);
+}
+
+/* ── Mobile Menu ──────────────────────────────────────────── */
+.header-mobile-menu {
+  display: none;
+  flex-direction: column;
+  border-top: 1px solid var(--line-100);
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.25s ease;
+}
+
+.header-mobile-menu.open {
+  display: flex;
+  max-height: 480px;
+}
+
+.header-mobile-menu a {
+  font: 500 15px var(--font-display);
+  color: var(--fg-2);
+  text-decoration: none;
+  padding: 14px 24px;
+  border-bottom: 1px solid var(--line-100);
+  transition: background 0.15s;
+}
+
+.header-mobile-menu a:last-of-type {
+  border-bottom: none;
+}
+
+.header-mobile-menu a:hover {
+  background: var(--bg-subtle);
+}
+
+.header-mobile-actions {
+  display: flex;
+  gap: 10px;
+  padding: 14px 24px;
+  border-top: 1px solid var(--line-100);
+}
+
+.header-mobile-actions .btn {
+  flex: 1;
+}
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .header-nav {
+    display: none;
+  }
+
+  .header-actions {
+    display: none;
+  }
+
+  .header-hamburger {
+    display: block;
+  }
+
+  .header-mobile-menu.open {
+    display: flex;
+  }
+}
