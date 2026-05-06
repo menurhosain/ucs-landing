@@ -23,70 +23,64 @@ const Pricing = () => {
   ];
   return (
     <Section id="pricing">
-      <div style={{ textAlign: 'center', marginBottom: 36 }}>
+      <div className="prc-header">
         <Eyebrow>Premium pricing plans</Eyebrow>
-        <h2 style={{ font: '700 clamp(32px, 3.6vw, 48px)/1.1 var(--font-display)', color: 'var(--fg-1)', letterSpacing: '-.015em', margin: '0 0 12px' }}>Pay once, build many.</h2>
-        <p style={{ font: '400 16px/1.6 var(--font-body)', color: 'var(--fg-2)', maxWidth: 560, margin: '0 auto' }}>Coming Soon Pro comparison table — what you'll get with Pro!</p>
+        <h2 className="prc-h2">Pay once, build many.</h2>
+        <p className="prc-sub">Coming Soon Pro comparison table — what you'll get with Pro!</p>
 
-        <div style={{ display: 'inline-flex', background: 'var(--cream-100)', border: '1px solid var(--line-100)', borderRadius: 999, padding: 4, marginTop: 28 }}>
+        <div className="prc-toggle">
           {[['yearly','Yearly'], ['lifetime','Lifetime · Best Bundle']].map(([k, l]) => (
-            <button key={k} onClick={() => setBilling(k)} style={{
-              padding: '10px 22px', borderRadius: 999,
+            <button key={k} onClick={() => setBilling(k)} className="prc-toggle-btn" style={{
               background: billing === k ? '#fff' : 'transparent',
-              border: 0, font: '600 14px var(--font-display)',
               color: billing === k ? 'var(--fg-1)' : 'var(--fg-3)',
               boxShadow: billing === k ? 'var(--shadow-sm)' : 'none',
-              cursor: 'pointer',
             }}>{l}</button>
           ))}
         </div>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 18 }}>
+      <div className="prc-grid">
         {tiers[billing].map(t => (
-          <div key={t.name} style={{
+          <div key={t.name} className="prc-card" style={{
             background: t.pop ? 'var(--brand-navy-800)' : '#fff',
             color: t.pop ? '#fff' : 'var(--fg-1)',
-            borderRadius: 20, padding: 28,
             border: t.pop ? 0 : '1px solid var(--line-100)',
             boxShadow: t.pop ? 'var(--shadow-xl)' : 'var(--shadow-sm)',
-            position: 'relative',
             transform: t.pop ? 'translateY(-8px)' : 'none',
           }}>
-            {t.pop && <span style={{ position: 'absolute', top: -10, right: 18, padding: '4px 12px', borderRadius: 999, background: 'var(--brand-yellow-500)', color: 'var(--brand-navy-800)', font: '700 11px var(--font-display)' }}>★ Most popular</span>}
-            <div style={{ font: '600 13px var(--font-display)', color: t.pop ? 'var(--brand-green-300)' : 'var(--fg-3)', textTransform: 'uppercase', letterSpacing: '.08em', marginBottom: 12 }}>{t.name}</div>
-            <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, marginBottom: 6 }}>
-              <span style={{ textDecoration: 'line-through', color: t.pop ? 'rgba(255,255,255,.4)' : 'var(--fg-4)', font: '500 16px var(--font-body)' }}>{t.was}</span>
-              <span style={{ font: '700 42px var(--font-display)', letterSpacing: '-.015em' }}>{t.price}</span>
-              <span style={{ color: t.pop ? 'rgba(255,255,255,.6)' : 'var(--fg-3)', font: '500 13px var(--font-body)' }}>/ {billing === 'yearly' ? 'yr' : 'once'}</span>
+            {t.pop && <span className="prc-popular-badge">★ Most popular</span>}
+            <div className="prc-plan-name" style={{ color: t.pop ? 'var(--brand-green-300)' : 'var(--fg-3)' }}>{t.name}</div>
+            <div className="prc-price-row">
+              <span className="prc-was-price" style={{ color: t.pop ? 'rgba(255,255,255,.4)' : 'var(--fg-4)' }}>{t.was}</span>
+              <span className="prc-price">{t.price}</span>
+              <span className="prc-period" style={{ color: t.pop ? 'rgba(255,255,255,.6)' : 'var(--fg-3)' }}>/ {billing === 'yearly' ? 'yr' : 'once'}</span>
             </div>
-            <div style={{ display: 'inline-flex', padding: '3px 10px', borderRadius: 999, background: t.pop ? 'rgba(34,197,94,.18)' : '#FFE6E7', color: t.pop ? 'var(--brand-green-300)' : '#9F1F23', font: '700 11px var(--font-display)', marginBottom: 18 }}>Save {t.save}</div>
-            <div style={{ font: '600 14px var(--font-display)', marginBottom: 14 }}>Install on {t.sites}</div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginBottom: 22 }}>
+            <div className="prc-save" style={{
+              background: t.pop ? 'rgba(34,197,94,.18)' : '#FFE6E7',
+              color: t.pop ? 'var(--brand-green-300)' : '#9F1F23',
+            }}>Save {t.save}</div>
+            <div className="prc-sites">Install on {t.sites}</div>
+            <div className="prc-features">
               {features.map(f => (
-                <div key={f} style={{ display: 'flex', gap: 10, font: '400 13px/1.5 var(--font-body)', color: t.pop ? 'rgba(255,255,255,.85)' : 'var(--fg-2)' }}>
-                  <span style={{ color: t.pop ? 'var(--brand-green-300)' : 'var(--brand-green-500)', fontWeight: 700 }}>✓</span>
+                <div key={f} className="prc-feature" style={{ color: t.pop ? 'rgba(255,255,255,.85)' : 'var(--fg-2)' }}>
+                  <span className="prc-check" style={{ color: t.pop ? 'var(--brand-green-300)' : 'var(--brand-green-500)' }}>✓</span>
                   {f}
                 </div>
               ))}
             </div>
-            <button style={{
-              width: '100%', padding: '13px', borderRadius: 8, border: 0,
-              background: t.pop ? 'var(--brand-green-500)' : 'var(--fg-1)',
-              color: '#fff', font: '600 14px var(--font-display)', cursor: 'pointer',
-            }}>Get License</button>
+            <button className="prc-cta-btn" style={{ background: t.pop ? 'var(--brand-green-500)' : 'var(--fg-1)' }}>Get License</button>
           </div>
         ))}
       </div>
 
-      <div style={{ marginTop: 56, padding: 32, background: 'var(--brand-green-50)', borderRadius: 20, display: 'flex', gap: 24, alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap' }}>
-        <div style={{ display: 'flex', gap: 18, alignItems: 'center' }}>
-          <div style={{ width: 52, height: 52, borderRadius: 999, background: '#fff', display: 'grid', placeItems: 'center', boxShadow: 'var(--shadow-sm)' }}>
+      <div className="prc-guarantee">
+        <div className="prc-guarantee-inner">
+          <div className="prc-guarantee-icon">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#16A34A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
           </div>
           <div>
-            <div style={{ font: '700 18px var(--font-display)', color: 'var(--fg-1)' }}>100% No-Risk · 14-Day Money-Back Guarantee</div>
-            <div style={{ font: '400 14px var(--font-body)', color: 'var(--fg-2)' }}>If WPUCS isn't the best fit, reach out — we'll happily refund 100% of your money.</div>
+            <div className="prc-guarantee-title">100% No-Risk · 14-Day Money-Back Guarantee</div>
+            <div className="prc-guarantee-desc">If WPUCS isn't the best fit, reach out — we'll happily refund 100% of your money.</div>
           </div>
         </div>
         <Btn variant="primary" size="md">Free Download</Btn>

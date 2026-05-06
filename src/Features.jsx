@@ -27,25 +27,17 @@ const Features = () => {
   return (
     <Section id="features" bg="var(--cream-100)">
       <Eyebrow>Features of UCSM</Eyebrow>
-      <h2 style={{
-        font: '700 clamp(32px, 3.6vw, 48px)/1.1 var(--font-display)',
-        color: 'var(--fg-1)', letterSpacing: '-.015em', maxWidth: 760, margin: '0 0 56px',
-      }}>Everything you need to launch <span style={{ color: 'var(--brand-green-600)' }}>before you launch.</span></h2>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20 }}>
-        {features.map((f, i) => (
-          <div key={f.t} style={{
-            background: '#fff', borderRadius: 16, padding: 28,
-            border: '1px solid var(--line-100)',
-            boxShadow: 'var(--shadow-sm)',
-            transition: 'transform .2s var(--ease-out), box-shadow .2s var(--ease-out)',
-          }}
-          onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = 'var(--shadow-green)'; }}
-          onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = 'var(--shadow-sm)'; }}>
-            <div style={{ width: 52, height: 52, borderRadius: 14, background: 'var(--brand-green-50)', display: 'grid', placeItems: 'center', marginBottom: 18 }}>
+      <h2 className="feat-h2">Everything you need to launch <span className="feat-h2-accent">before you launch.</span></h2>
+      <div className="feat-grid">
+        {features.map((f) => (
+          <div key={f.t} className="feat-card"
+            onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = 'var(--shadow-green)'; }}
+            onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = 'var(--shadow-sm)'; }}>
+            <div className="feat-icon">
               <Icon name={f.icon} />
             </div>
-            <div style={{ font: '600 18px var(--font-display)', color: 'var(--fg-1)', marginBottom: 8 }}>{f.t}</div>
-            <div style={{ font: '400 14px/1.6 var(--font-body)', color: 'var(--fg-2)' }}>{f.d}</div>
+            <div className="feat-title">{f.t}</div>
+            <div className="feat-desc">{f.d}</div>
           </div>
         ))}
       </div>
