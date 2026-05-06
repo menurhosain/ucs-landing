@@ -28,58 +28,44 @@ const Templates = () => {
   const filtered = active === 'All' ? items : items.filter(i => i.c === active);
   return (
     <Section id="templates">
-      <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: 24, marginBottom: 36 }}>
+      <div className="tmpl-header">
         <div>
           <Eyebrow>29 Pro · 7 Free templates</Eyebrow>
-          <h2 style={{ font: '700 clamp(32px, 3.6vw, 48px)/1.1 var(--font-display)', color: 'var(--fg-1)', letterSpacing: '-.015em', margin: 0, maxWidth: 720 }}>
+          <h2 className="tmpl-h2">
             Built with the Block Editor. <br/>
-            <span style={{ color: 'var(--brand-green-600)' }}>Pick a starting point.</span>
+            <span className="tmpl-h2-accent">Pick a starting point.</span>
           </h2>
         </div>
         <Btn variant="ghost" size="md">View all 29 →</Btn>
       </div>
 
-      <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 28 }}>
+      <div className="tmpl-filters">
         {cats.map(c => (
-          <button key={c} onClick={() => setActive(c)} style={{
-            padding: '8px 16px', borderRadius: 999,
+          <button key={c} onClick={() => setActive(c)} className="tmpl-filter-btn" style={{
             background: active === c ? 'var(--brand-navy-800)' : '#fff',
             color: active === c ? '#fff' : 'var(--fg-2)',
             border: active === c ? 0 : '1px solid var(--line-200)',
-            font: '500 13px var(--font-display)',
-            cursor: 'pointer', transition: 'all .15s var(--ease-out)',
           }}>{c}</button>
         ))}
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 18 }}>
+      <div className="tmpl-grid">
         {filtered.map((t, i) => (
-          <div key={t.t} style={{
-            position: 'relative', borderRadius: 16, overflow: 'hidden',
-            background: '#fff', border: '1px solid var(--line-100)',
-            boxShadow: 'var(--shadow-sm)', cursor: 'pointer',
-            transition: 'transform .2s var(--ease-out), box-shadow .2s var(--ease-out)',
-          }}
-          onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = 'var(--shadow-lg)'; }}
-          onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = 'var(--shadow-sm)'; }}>
-            <div style={{ aspectRatio: '4/5', background: `linear-gradient(165deg, ${t.bg}, ${t.hue}cc 60%, ${t.hue})`, position: 'relative', overflow: 'hidden' }}>
+          <div key={t.t} className="tmpl-card"
+            onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = 'var(--shadow-lg)'; }}
+            onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = 'var(--shadow-sm)'; }}>
+            <div className="tmpl-img-wrap" style={{ background: `linear-gradient(165deg, ${t.bg}, ${t.hue}cc 60%, ${t.hue})` }}>
               <img src={`https://wpucs.com/wp-content/uploads/2023/11/${t.img}.jpg`} alt={t.t}
                 onError={e => { e.currentTarget.style.display = 'none'; }}
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}/>
-              {/* Top-right Premium pill */}
-              <span style={{
-                position: 'absolute', top: 12, right: 12,
-                padding: '4px 10px', borderRadius: 999,
-                background: 'rgba(255,255,255,.95)', color: 'var(--brand-navy-800)',
-                font: '700 10px var(--font-display)', letterSpacing: '.04em',
-              }}>{i % 5 === 0 ? 'FREE' : 'PRO'}</span>
+                className="tmpl-img"/>
+              <span className="tmpl-badge">{i % 5 === 0 ? 'FREE' : 'PRO'}</span>
             </div>
-            <div style={{ padding: '14px 16px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+            <div className="tmpl-footer">
               <div>
-                <div style={{ font: '500 11px var(--font-display)', color: 'var(--fg-3)', textTransform: 'uppercase', letterSpacing: '.06em' }}>{t.c}</div>
-                <div style={{ font: '600 15px var(--font-display)', color: 'var(--fg-1)' }}>{t.t}</div>
+                <div className="tmpl-cat">{t.c}</div>
+                <div className="tmpl-name">{t.t}</div>
               </div>
-              <button style={{ padding: '6px 12px', borderRadius: 6, background: 'var(--brand-green-50)', color: 'var(--brand-green-700)', border: 0, font: '600 12px var(--font-display)', cursor: 'pointer' }}>Preview</button>
+              <button className="tmpl-preview-btn">Preview</button>
             </div>
           </div>
         ))}

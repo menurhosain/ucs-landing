@@ -6,16 +6,16 @@ const HowItWorks = () => {
   ];
   return (
     <Section bg="var(--bg-page)">
-      <div style={{ textAlign: 'center', marginBottom: 56 }}>
+      <div className="hiw-header">
         <Eyebrow>How it works</Eyebrow>
-        <h2 style={{ font: '700 clamp(32px, 3.6vw, 48px)/1.1 var(--font-display)', color: 'var(--fg-1)', letterSpacing: '-.015em', margin: 0 }}>Three steps. About 90 seconds.</h2>
+        <h2 className="hiw-h2">Three steps. About 90 seconds.</h2>
       </div>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24, position: 'relative' }}>
+      <div className="hiw-steps">
         {steps.map(s => (
-          <div key={s.n} style={{ background: '#fff', border: '1px solid var(--line-100)', borderRadius: 20, padding: 32, boxShadow: 'var(--shadow-sm)' }}>
-            <div style={{ font: '800 56px var(--font-display)', color: 'var(--brand-green-500)', letterSpacing: '-.02em', lineHeight: 1, marginBottom: 18 }}>{s.n}</div>
-            <div style={{ font: '700 22px var(--font-display)', color: 'var(--fg-1)', marginBottom: 8 }}>{s.t}</div>
-            <div style={{ font: '400 15px/1.6 var(--font-body)', color: 'var(--fg-2)' }}>{s.d}</div>
+          <div key={s.n} className="hiw-step">
+            <div className="hiw-step-num">{s.n}</div>
+            <div className="hiw-step-title">{s.t}</div>
+            <div className="hiw-step-desc">{s.d}</div>
           </div>
         ))}
       </div>
@@ -31,16 +31,16 @@ const UseCases = () => {
   ];
   return (
     <Section bg="var(--cream-100)">
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 2fr', gap: 56, alignItems: 'center' }}>
+      <div className="ucs-grid">
         <div>
           <Eyebrow>Use cases</Eyebrow>
-          <h2 style={{ font: '700 clamp(32px, 3.4vw, 44px)/1.12 var(--font-display)', color: 'var(--fg-1)', letterSpacing: '-.01em', margin: 0 }}>Designed for the moments your site isn't ready yet.</h2>
+          <h2 className="ucs-h2">Designed for the moments your site isn't ready yet.</h2>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16 }}>
+        <div className="ucs-cases">
           {cases.map(c => (
-            <div key={c.t} style={{ background: '#fff', borderRadius: 16, padding: 24, borderTop: `4px solid ${c.tone}`, boxShadow: 'var(--shadow-sm)' }}>
-              <div style={{ font: '700 18px var(--font-display)', color: 'var(--fg-1)', marginBottom: 6 }}>{c.t}</div>
-              <div style={{ font: '400 14px/1.55 var(--font-body)', color: 'var(--fg-2)' }}>{c.d}</div>
+            <div key={c.t} className="ucs-case" style={{ borderTop: `4px solid ${c.tone}` }}>
+              <div className="ucs-case-title">{c.t}</div>
+              <div className="ucs-case-desc">{c.d}</div>
             </div>
           ))}
         </div>
@@ -51,16 +51,16 @@ const UseCases = () => {
 
 const MidCTA = () => (
   <Section bg="var(--brand-navy-900)">
-    <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', alignItems: 'center', gap: 40 }}>
+    <div className="mcta-grid">
       <div>
         <Eyebrow color="var(--brand-green-300)">Get started now</Eyebrow>
-        <h2 style={{ font: '800 clamp(32px, 3.6vw, 48px)/1.08 var(--font-display)', color: '#fff', letterSpacing: '-.015em', margin: '0 0 14px' }}>
+        <h2 className="mcta-h2">
           Start using a great <br/>
-          <span style={{ color: 'var(--brand-green-300)' }}>Maintenance Mode plugin.</span>
+          <span className="mcta-h2-accent">Maintenance Mode plugin.</span>
         </h2>
-        <p style={{ font: '400 17px/1.6 var(--font-body)', color: 'rgba(255,255,255,.72)', maxWidth: 540, margin: 0 }}>Create &amp; publish pages, track conversions, and start collecting leads in minutes.</p>
+        <p className="mcta-p">Create &amp; publish pages, track conversions, and start collecting leads in minutes.</p>
       </div>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+      <div className="mcta-actions">
         <Btn variant="primary" size="lg">Free Download</Btn>
         <Btn size="lg" style={{ background: 'transparent', color: '#fff', border: '1px solid rgba(255,255,255,.25)' }}>See pricing →</Btn>
       </div>

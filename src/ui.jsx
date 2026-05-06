@@ -15,12 +15,8 @@ const Btn = ({ children, variant = 'primary', size = 'md', onClick, style, ...re
   };
   return (
     <button onClick={onClick}
-      style={{
-        border: 0, borderRadius: 8, cursor: 'pointer',
-        fontFamily: 'var(--font-display)', fontWeight: 600,
-        transition: 'transform .15s var(--ease-out), background .15s var(--ease-out)',
-        ...sizes[size], ...variants[variant], ...style,
-      }}
+      className="ui-btn"
+      style={{ ...sizes[size], ...variants[variant], ...style }}
       onMouseDown={e => e.currentTarget.style.transform = 'scale(.98)'}
       onMouseUp={e => e.currentTarget.style.transform = ''}
       onMouseLeave={e => e.currentTarget.style.transform = ''}
@@ -38,19 +34,12 @@ const Pill = ({ children, tone = 'free' }) => {
     save:    { background: '#FFE6E7', color: '#9F1F23' },
   };
   return (
-    <span style={{
-      padding: '4px 10px', borderRadius: 999,
-      fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: 11,
-      ...tones[tone],
-    }}>{children}</span>
+    <span className="ui-pill" style={{ ...tones[tone] }}>{children}</span>
   );
 };
 
 const Eyebrow = ({ children, color = 'var(--brand-green-600)' }) => (
-  <div style={{
-    font: '600 13px var(--font-display)',
-    color, textTransform: 'uppercase', letterSpacing: '.08em', marginBottom: 12,
-  }}>{children}</div>
+  <div className="ui-eyebrow" style={{ color }}>{children}</div>
 );
 
 const Section = ({ children, bg = 'var(--bg-page)', id, padded = true }) => (
@@ -58,23 +47,16 @@ const Section = ({ children, bg = 'var(--bg-page)', id, padded = true }) => (
     background: bg,
     padding: padded ? 'clamp(64px, 9vw, 120px) 24px' : 0,
   }}>
-    <div style={{ maxWidth: 1240, margin: '0 auto' }}>{children}</div>
+    <div className="ui-section-inner">{children}</div>
   </section>
 );
 
 const Logo = ({ dark }) => (
-  <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-    <div style={{
-      width: 36, height: 36, borderRadius: 10,
-      background: 'var(--brand-green-500)',
-      color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center',
-      font: '800 18px var(--font-display)',
-    }}>W</div>
-    <div style={{
-      font: '800 20px var(--font-display)',
-      letterSpacing: '-.01em',
-      color: dark ? '#fff' : 'var(--fg-1)',
-    }}>WPUCS<span style={{ color: 'var(--brand-green-500)' }}>.</span></div>
+  <div className="ui-logo">
+    <div className="ui-logo-icon">W</div>
+    <div className="ui-logo-text" style={{ color: dark ? '#fff' : 'var(--fg-1)' }}>
+      WPUCS<span className="ui-logo-dot">.</span>
+    </div>
   </div>
 );
 
