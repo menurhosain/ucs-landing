@@ -25,7 +25,7 @@ const HowItWorks = () => {
 
 const UseCases = () => {
   const cases = [
-    { t: 'Pre-launch sites', d: 'Capture early-bird emails before launch day.', tone: 'var(--brand-green-500)' },
+    { t: 'Pre-launch sites', d: 'Capture early-bird emails before launch day.', tone: 'var(--brand-accent-500)' },
     { t: 'Maintenance mode', d: 'Keep visitors informed during upgrades.', tone: 'var(--brand-yellow-500)' },
     { t: 'Product launches', d: 'Build hype with countdowns and reveal pages.', tone: 'var(--brand-navy-800)' },
   ];
@@ -53,7 +53,7 @@ const MidCTA = () => (
   <Section bg="var(--brand-navy-900)">
     <div className="mcta-grid">
       <div>
-        <Eyebrow color="var(--brand-green-300)">Get started now</Eyebrow>
+        <Eyebrow color="var(--brand-accent-300)">Get started now</Eyebrow>
         <h2 className="mcta-h2">
           Start using a great <br/>
           <span className="mcta-h2-accent">Maintenance Mode plugin.</span>

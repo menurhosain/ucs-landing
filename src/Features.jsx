@@ -22,7 +22,7 @@ const Features = () => {
       globe:  <><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></>,
       zap:    <><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></>,
     };
-    return <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#16A34A" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">{paths[name]}</svg>;
+    return <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#3F2FCC" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">{paths[name]}</svg>;
   };
   return (
     <Section id="features" bg="var(--cream-100)">

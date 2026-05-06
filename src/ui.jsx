@@ -8,10 +8,10 @@ const Btn = ({ children, variant = 'primary', size = 'md', onClick, style, ...re
     lg: { padding: '18px 34px', fontSize: 16 },
   };
   const variants = {
-    primary: { background: 'var(--brand-green-500)', color: '#fff', boxShadow: '0 8px 22px -8px rgba(34,197,94,.55)' },
+    primary: { background: 'var(--brand-accent-500)', color: '#fff', boxShadow: '0 8px 22px -8px rgba(81, 61, 232, 0.55)' },
     dark:    { background: 'var(--brand-navy-800)', color: '#fff' },
     ghost:   { background: 'transparent', color: 'var(--fg-1)', border: '1px solid var(--line-200)' },
-    link:    { background: 'transparent', color: 'var(--brand-green-700)', padding: '6px 0' },
+    link:    { background: 'transparent', color: 'var(--brand-accent-700)', padding: '6px 0' },
   };
   return (
     <button onClick={onClick}
@@ -28,7 +28,7 @@ const Btn = ({ children, variant = 'primary', size = 'md', onClick, style, ...re
 
 const Pill = ({ children, tone = 'free' }) => {
   const tones = {
-    free:    { background: 'var(--brand-green-50)', color: 'var(--brand-green-700)' },
+    free:    { background: 'var(--brand-accent-50)', color: 'var(--brand-accent-700)' },
     premium: { background: 'var(--brand-navy-800)', color: '#fff' },
     new:     { background: 'var(--brand-yellow-500)', color: 'var(--brand-navy-800)' },
     save:    { background: '#FFE6E7', color: '#9F1F23' },
@@ -38,7 +38,7 @@ const Pill = ({ children, tone = 'free' }) => {
   );
 };
 
-const Eyebrow = ({ children, color = 'var(--brand-green-600)' }) => (
+const Eyebrow = ({ children, color = 'var(--brand-accent-600)' }) => (
   <div className="ui-eyebrow" style={{ color }}>{children}</div>
 );
 

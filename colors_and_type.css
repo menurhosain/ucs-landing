@@ -6,23 +6,17 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root {
-  /* ---------- BRAND PALETTE — 2026 trend refresh ----------------------------
-     Direction: earthy, desaturated, naturalistic. Matcha-sage primary,
-     warm off-black secondary, butter-yellow accent. Ditches the punchy
-     SaaS-green for something closer to Pantone Mocha-Mousse / Aura-Indigo
-     trend territory.
-     ------------------------------------------------------------------------- */
 
-  /* Primary — Matcha / sage (replaces SaaS green) */
-  --brand-green-50:  #F1F5EC;
-  --brand-green-100: #DDE6D0;
-  --brand-green-200: #BFCEAD;
-  --brand-green-300: #9DB286;
-  --brand-green-400: #7E9868;
-  --brand-green-500: #6B8755;   /* primary — matcha sage */
-  --brand-green-600: #556E44;   /* primary-hover */
-  --brand-green-700: #3F5333;
-  --brand-green-800: #2C3B23;
+
+  --brand-accent-50:  #EEEBFF;
+  --brand-accent-100: #D9D3FF;
+  --brand-accent-200: #B8ADFF;
+  --brand-accent-300: #9787FF;
+  --brand-accent-400: #7561F5;
+  --brand-accent-500: #513DE8;  /* main accent */
+  --brand-accent-600: #3F2FCC;
+  --brand-accent-700: #2E22A3;
+  --brand-accent-800: #1F187A;
 
   /* Secondary — Warm off-black with subtle plum undertone */
   --brand-navy-50:   #F3F1EE;
@@ -64,7 +58,7 @@
   --bg-surface:  var(--white);
   --bg-raised:   var(--white);
   --bg-inverted: var(--brand-navy-900);
-  --bg-tint:     var(--brand-green-50);
+  --bg-tint:     var(--brand-accent-50);
   --bg-cream:    var(--cream-100);
 
   --fg-1: var(--brand-navy-800);     /* primary text on light, headings */
@@ -75,12 +69,12 @@
   --fg-on-dark-muted:  rgba(255,255,255,0.72);
   --fg-on-brand:       #FFFFFF;       /* on green */
 
-  --accent:        var(--brand-green-500);
-  --accent-hover:  var(--brand-green-600);
-  --accent-soft:   var(--brand-green-50);
+  --accent:        var(--brand-accent-500);
+  --accent-hover:  var(--brand-accent-600);
+  --accent-soft:   var(--brand-accent-50);
 
   /* status */
-  --success: var(--brand-green-500);
+  --success: var(--brand-accent-500);
   --warning: var(--brand-yellow-500);
   --danger:  #E5484D;
   --info:    #3E7BFA;
@@ -202,5 +196,5 @@
   font: var(--eyebrow);
   letter-spacing: var(--eyebrow-tracking);
   text-transform: uppercase;
-  color: var(--brand-green-600);
+  color: var(--brand-accent-600);
 }

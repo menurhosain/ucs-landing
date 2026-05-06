@@ -21,7 +21,7 @@ const Header = () => {
           ))}
         </nav>
         <div className="hdr-actions">
-f          <Btn variant="ghost" size="sm">Sign in</Btn>
+          <Btn variant="ghost" size="sm">Sign in</Btn>
           <Btn variant="primary" size="sm">Buy Now</Btn>
         </div>
       </div>

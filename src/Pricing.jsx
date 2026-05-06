@@ -49,7 +49,7 @@ const Pricing = () => {
             transform: t.pop ? 'translateY(-8px)' : 'none',
           }}>
             {t.pop && <span className="prc-popular-badge">★ Most popular</span>}
-            <div className="prc-plan-name" style={{ color: t.pop ? 'var(--brand-green-300)' : 'var(--fg-3)' }}>{t.name}</div>
+            <div className="prc-plan-name" style={{ color: t.pop ? 'var(--brand-accent-300)' : 'var(--fg-3)' }}>{t.name}</div>
             <div className="prc-price-row">
               <span className="prc-was-price" style={{ color: t.pop ? 'rgba(255,255,255,.4)' : 'var(--fg-4)' }}>{t.was}</span>
               <span className="prc-price">{t.price}</span>
@@ -57,18 +57,18 @@ const Pricing = () => {
             </div>
             <div className="prc-save" style={{
               background: t.pop ? 'rgba(34,197,94,.18)' : '#FFE6E7',
-              color: t.pop ? 'var(--brand-green-300)' : '#9F1F23',
+              color: t.pop ? 'var(--brand-accent-300)' : '#9F1F23',
             }}>Save {t.save}</div>
             <div className="prc-sites">Install on {t.sites}</div>
             <div className="prc-features">
               {features.map(f => (
                 <div key={f} className="prc-feature" style={{ color: t.pop ? 'rgba(255,255,255,.85)' : 'var(--fg-2)' }}>
-                  <span className="prc-check" style={{ color: t.pop ? 'var(--brand-green-300)' : 'var(--brand-green-500)' }}>✓</span>
+                  <span className="prc-check" style={{ color: t.pop ? 'var(--brand-accent-300)' : 'var(--brand-accent-500)' }}>✓</span>
                   {f}
                 </div>
               ))}
             </div>
-            <button className="prc-cta-btn" style={{ background: t.pop ? 'var(--brand-green-500)' : 'var(--fg-1)' }}>Get License</button>
+            <button className="prc-cta-btn" style={{ background: t.pop ? 'var(--brand-accent-500)' : 'var(--fg-1)' }}>Get License</button>
           </div>
         ))}
       </div>
@@ -76,7 +76,7 @@ const Pricing = () => {
       <div className="prc-guarantee">
         <div className="prc-guarantee-inner">
           <div className="prc-guarantee-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#16A34A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#513DE8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
           </div>
           <div>
             <div className="prc-guarantee-title">100% No-Risk · 14-Day Money-Back Guarantee</div>

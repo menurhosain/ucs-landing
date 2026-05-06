@@ -41,7 +41,7 @@ const Hero = () => (
                 {['Dashboard', 'Templates', 'Design', 'Countdown', 'SEO', 'Newsletter'].map((l, i) => (
                   <div key={l} className="hero-sidebar-item" style={{
                     background: i === 1 ? 'rgba(34,197,94,.18)' : 'transparent',
-                    color: i === 1 ? 'var(--brand-green-300)' : 'rgba(255,255,255,.7)',
+                    color: i === 1 ? 'var(--brand-accent-300)' : 'rgba(255,255,255,.7)',
                   }}>{l}</div>
                 ))}
               </aside>
@@ -54,7 +54,7 @@ const Hero = () => (
                   {['#7AAE63','#D9A75A','#5FA9C4','#A88AC9','#E08263','#6CC2A3'].map((c, i) => (
                     <div key={i} className="hero-tmpl-item" style={{
                       background: `linear-gradient(160deg, ${c}, ${c}cc)`,
-                      border: i === 0 ? '2px solid var(--brand-green-500)' : '1px solid var(--line-100)',
+                      border: i === 0 ? '2px solid var(--brand-accent-500)' : '1px solid var(--line-100)',
                     }}>
                       {i === 0 && <span className="hero-active-badge">ACTIVE</span>}
                     </div>
@@ -68,7 +68,7 @@ const Hero = () => (
         {/* Floating mini badge */}
         <div className="hero-float-badge">
           <div className="hero-float-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16A34A" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#513DE8" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
           </div>
           <div>
             <div className="hero-float-title">Live in 90s</div>

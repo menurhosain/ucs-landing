@@ -1,0 +1,48 @@
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1024px) {
+  .stats-grid  { grid-template-columns: repeat(3,1fr); }
+  .stats-item  { border-right: var(--border-1); border-bottom: var(--border-1); padding: 20px 16px; }
+  .stats-item:nth-child(3)  { border-right: 0; }
+  .stats-item:nth-child(4),
+  .stats-item:nth-child(5),
+  .stats-item:nth-child(6)  { border-bottom: 0; }
+  .feat-grid   { grid-template-columns: repeat(2,1fr); }
+  .tmpl-grid   { grid-template-columns: repeat(3,1fr); }
+  .prc-grid    { grid-template-columns: repeat(2,1fr); }
+  .footer-cols { grid-template-columns: 1fr 1fr; }
+  .ucs-grid    { grid-template-columns: 1fr; gap: 32px; }
+  .mcta-grid   { grid-template-columns: 1fr; gap: 32px; }
+}
+
+@media (max-width: 768px) {
+  .section { padding: 64px 0; }
+  .hero { padding: 56px 0 72px; }
+  .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+  .hero-preview { display: none; }
+  .hero-lead { font-size: 17px; }
+  .stats-grid { grid-template-columns: repeat(2,1fr); }
+  .stats-item:nth-child(2)  { border-right: 0; }
+  .stats-item:nth-child(3)  { border-right: var(--border-1); border-bottom: 0; }
+  .stats-item:nth-child(4)  { border-right: 0; border-bottom: 0; }
+  .stats-item:nth-child(5)  { border-bottom: 0; }
+  .feat-grid   { grid-template-columns: 1fr; }
+  .tmpl-grid   { grid-template-columns: repeat(2,1fr); }
+  .hiw-steps   { grid-template-columns: 1fr; }
+  .ucs-cases   { grid-template-columns: repeat(2,1fr); }
+  .prc-grid    { grid-template-columns: 1fr; }
+  .footer-cols { grid-template-columns: 1fr; gap: 28px; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+  .mcta-actions { flex-direction: row; flex-wrap: wrap; }
+  #back-to-top  { bottom: 20px; right: 20px; }
+}
+
+@media (max-width: 480px) {
+  .container { padding: 0 16px; }
+  .tmpl-grid  { grid-template-columns: 1fr; }
+  .ucs-cases  { grid-template-columns: 1fr; }
+  .prc-header .prc-toggle { flex-wrap: wrap; border-radius: var(--radius-md); }
+  .hero-cta-row { flex-direction: column; align-items: flex-start; }
+  .hero-cta-row .btn { width: 100%; justify-content: center; }
+}
