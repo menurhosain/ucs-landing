@@ -97,7 +97,7 @@
         : reviews.filter((r) => r.rating === Number(filter));
 
     return (
-      <section className="reviews-section">
+      <section id="reviews" className="reviews-section">
         <div className="reviews-section__inner">
           <div className="reviews-section__heading">
             <Eyebrow>Some Customers Love</Eyebrow>

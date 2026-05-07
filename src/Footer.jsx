@@ -25,7 +25,7 @@ const Footer = () => {
       <div className="ftr-inner">
         <div className="ftr-columns">
           <div className="ftr-brand">
-            <Logo2 dark />
+            <Logo2 footerlogo />
             <p className="ftr-brand-p">
               WPUCS is part of{' '}
               <span className="ftr-brand-highlight">RSTheme</span>, makers of

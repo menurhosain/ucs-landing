@@ -53,13 +53,14 @@ const Section = ({ children, bg = 'var(--bg-page)', id, padded = true }) => (
 
 const Logo = ({ dark }) => (
   <div className="ui-logo">
-    <img src="/image/logo.png" alt="" />
+    <a href="https://wpucs.com/"><img src="/image/logo.png" alt="" /></a>
   </div>
 );
-const Logo2 = ({ dark }) => (
+const Logo2 = ({ footerlogo }) => (
   <div className="ui-logo">
-    <img src="/image/logo-dark.png" alt="" />
+    <a href="https://wpucs.com/"><img src="/image/logo-dark.png" alt="" /></a>
   </div>
 );
+
 
 Object.assign(window, { Btn, Pill, Eyebrow, Section, Logo });

@@ -39,6 +39,7 @@ const Header = () => {
         backdropFilter: scrolled ? 'blur(12px)' : 'none',
         borderBottom: scrolled ? '1px solid var(--line-100)' : '1px solid transparent',
       }}>
+        
         <div className="hdr-inner" style={{ height: scrolled ? 64 : 76 }}>
           <Logo />
           <nav className="hdr-nav">
