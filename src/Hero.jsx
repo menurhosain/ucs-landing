@@ -1,7 +1,7 @@
 const Hero = () => (
   <Section padded>
     <div className="hero-grid">
-      <div>
+      <div className="hero-leftbar">
         <div className="hero-badge">
           <span className="hero-badge-dot"></span>
           NEW · GUTENBERG BLOCK EDITOR SUPPORT

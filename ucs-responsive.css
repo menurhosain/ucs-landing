@@ -1,8 +1,41 @@
 /* ============================================================
    RESPONSIVE
    ============================================================ */
+@media (max-width: 1200px) {
+  .hero-grid{
+    grid-template-columns: 442px 1fr;
+  }
+  .hero-h1{
+    font-size:4vw;
+  }
+  .stats-label{
+    font-size: 12px;
+  }
+  .mcta-grid{
+    grid-template-columns: 2fr 2fr;
+  }
+  .ucs-case{
+    padding: 15px;
+  }
+  .ucs-case-title{
+    font-size: 17px;
+  }
+  .ucs-case-desc{
+    font-size: 14px;
+  }
+  .prc-card{
+    padding: 28px 20px;
+  }
+  .prc-feature{
+    font-size: 13px;
+  }
+}
 @media (max-width: 1024px) {
   .stats-grid  { grid-template-columns: repeat(3,1fr); }
+  .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+  .hero-h1{
+    font-size:5vw;
+  }
   .stats-item  { border-right: var(--border-1); border-bottom: var(--border-1); padding: 20px 16px; }
   .stats-item:nth-child(3)  { border-right: 0; }
   .stats-item:nth-child(4),
@@ -13,7 +46,36 @@
   .prc-grid    { grid-template-columns: repeat(2,1fr); }
   .footer-cols { grid-template-columns: 1fr 1fr; }
   .ucs-grid    { grid-template-columns: 1fr; gap: 32px; }
-  .mcta-grid   { grid-template-columns: 1fr; gap: 32px; }
+  .mcta-grid   { 
+    grid-template-columns: 1fr; 
+    gap: 32px; 
+    text-align: center;
+    place-items: center;
+  }
+  #features .feat-h2, #features .ui-eyebrow{
+    padding: 0 100px;
+  }
+  .hero-tmpl-item{
+    aspect-ratio: 4 / 2;
+  }
+  .tmpl-name{
+    font-size: 14px;
+  }
+  .tmpl-cat{
+    font-size: 11px;
+  }
+  .hiw-steps{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ucs-h2{
+    max-width: 400px;
+  }
+  .ftr-columns{
+    grid-template-columns: 1fr 1fr;
+  }
+  .hero-float-badge{
+    left: 215px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -31,13 +93,47 @@
   .tmpl-grid   { grid-template-columns: repeat(2,1fr); }
   .hiw-steps   { grid-template-columns: 1fr; }
   .ucs-cases   { grid-template-columns: repeat(2,1fr); }
-  .prc-grid    { grid-template-columns: 1fr; }
+  
   .footer-cols { grid-template-columns: 1fr; gap: 28px; }
   .footer-bottom { flex-direction: column; align-items: flex-start; }
-  .mcta-actions { flex-direction: row; flex-wrap: wrap; }
+  .mcta-actions { flex-direction: row; flex-wrap: wrap;justify-content: center; }
   #back-to-top  { bottom: 20px; right: 20px; }
+  .mcta-grid   { grid-template-columns: 1fr; gap: 32px; }
+  #features .feat-h2, #features .ui-eyebrow{
+    padding: 0 0px;
+  } 
+  .hero-h1{
+    font-size:7.5vw;
+  }
+  .hero-dashboard-grid{
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-float-badge{
+    display: none;
+  }
+  .ftr-brand-p{
+    font-size: 14px;
+  }
+  .ftr-bottom{
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    text-align: center;
+
+  }
+  .prc-guarantee-title{
+    font-size: 18px;
+  }
+  .prc-guarantee-inner{
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
+@media (max-width: 640px) {
+  .prc-grid    { grid-template-columns: 1fr;gap: 30px; }
+}
 @media (max-width: 480px) {
   .container { padding: 0 16px; }
   .tmpl-grid  { grid-template-columns: 1fr; }
@@ -45,4 +141,79 @@
   .prc-header .prc-toggle { flex-wrap: wrap; border-radius: var(--radius-md); }
   .hero-cta-row { flex-direction: column; align-items: flex-start; }
   .hero-cta-row .btn { width: 100%; justify-content: center; }
+  .ui-logo img{
+    height: 28px;
+  }  
+  .hero-h1{
+    font-size:7.5vw;
+  }
+  .hero-lead{
+    min-width: 100%;
+  }
+  .hero-grid{
+    display: block;
+  }
+  .hero-social-proof{
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  .hero-chrome{
+    flex-wrap: wrap;
+  }
+  .hero-address-bar{
+    margin-left: 0;
+    width: 100%;
+  }
+  .hero-template-header{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .hero-tmpl-item{
+    aspect-ratio: 2 / 2;
+  }
+  .feat-h2{
+    font-size: 22px;
+  }
+  .ui-eyebrow{
+    font-size: 13px;
+  }
+  .feat-title{
+    font-size: 18px;
+  }
+  .tmpl-h2{
+    font-size: 22px;
+  }
+  .hiw-h2{
+    font-size: 22px;
+  }
+  .hiw-step-title{
+    font-size: 18px;
+  }
+  .hiw-step{
+    padding: 20px;
+  }
+  .hiw-header{
+    margin-bottom: 20px;
+  }
+  .ucs-h2{
+    font-size: 22px;
+  }
+  .mcta-h2{
+    font-size: 22px;
+  }
+  .prc-h2{
+    font-size: 22px;
+  }
+  .prc-sub{
+    font-size: 14px;
+  }
+  .ftr-columns{
+    grid-template-columns: 1fr;
+  }
+  .ftr-payments{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
