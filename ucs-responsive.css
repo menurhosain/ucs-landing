@@ -216,4 +216,10 @@
     flex-wrap: wrap;
     justify-content: center;
   }
+  .hiw-step-num{
+    font-size: 36px;
+  }
+  .stats-value{
+    font-size: 26px;
+  }
 }

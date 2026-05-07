@@ -104,3 +104,4 @@ const Footer = () => {
 };
 
 window.Footer = Footer;
+
