@@ -103,17 +103,7 @@
             <Eyebrow>Some Customers Love</Eyebrow>
             <h2 className="hiw-h2">What our customers say</h2>
           </div>
-          <div className="reviews-section__filters">
-            {["all", "5", "4", "3"].map((f) => (
-              <button
-                key={f}
-                className={`filter-btn ${filter === f ? "filter-btn--active" : ""}`}
-                onClick={() => setFilter(f)}
-              >
-                {f === "all" ? "All Reviews" : `${f} Stars`}
-              </button>
-            ))}
-          </div>
+
 
           <div className="reviews-grid">
             {filtered.map((review) => (

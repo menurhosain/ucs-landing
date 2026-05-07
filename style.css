@@ -1087,48 +1087,9 @@ color: var(--brand-accent-500);
 /* ─── Heading ─────────────────────────────────────────── */
 .reviews-section__heading {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
-/* ─── Filter Buttons ──────────────────────────────────── */
-.reviews-section__filters {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 36px;
-}
-
-.filter-btn {
-  padding: 9px 20px;
-  border-radius: var(--radius-btn);
-  border: 1.5px solid var(--line-200);
-  background: var(--surface);
-  color: var(--text-secondary);
-  font-family: var(--font-body);
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.18s ease;
-}
-
-.filter-btn:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-  background: var(--accent-light);
-}
-
-.filter-btn--active {
-  background: var(--accent);
-  color: #fff;
-  border-color: var(--accent);
-}
-
-.filter-btn--active:hover {
-  background: var(--accent);
-  color: #fff;
-  opacity: 0.9;
-}
 
 /* ─── Reviews Grid ────────────────────────────────────── */
 .reviews-grid {
@@ -1219,7 +1180,7 @@ color: var(--brand-accent-500);
 }
 
 .review-card__text {
-  font-size: 14.5px;
+  font-size: 15.5px;
   color: var(--text-secondary);
   line-height: 1.65;
   margin: 0;
