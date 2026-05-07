@@ -2,16 +2,16 @@ const Pricing = () => {
   const [billing, setBilling] = React.useState('lifetime');
   const tiers = {
     yearly: [
-      { name: 'Personal',    price: '$19', was: '$29',  save: '52%', sites: '1 site',    pop: false },
-      { name: 'Team',        price: '$29', was: '$59',  save: '60%', sites: '5 sites',   pop: true  },
-      { name: 'Developer',   price: '$59', was: '$99',  save: '55%', sites: '10 sites',  pop: false },
-      { name: 'Agency',      price: '$79', was: '$139', save: '43%', sites: '50 sites',  pop: false },
+      { name: 'Personal',    price: '$19', was: '$29',  save: '34%', sites: '1 site',    pop: false, link: 'https://rstheme.com/checkout?edd_action=add_to_cart&download_id=24012&edd_options%5Bprice_id%5D=1&discount=BFCM52' },
+      { name: 'Team',        price: '$29', was: '$59',  save: '50%', sites: '5 sites',   pop: true, link: 'https://rstheme.com/checkout?edd_action=add_to_cart&download_id=24012&edd_options%5Bprice_id%5D=2&discount=BFCM60'  },
+      { name: 'Developer',   price: '$59', was: '$99',  save: '40%', sites: '10 sites',  pop: false, link: 'https://rstheme.com/checkout?edd_action=add_to_cart&download_id=24012&edd_options%5Bprice_id%5D=3&discount=BFCM50' },
+      { name: 'Agency',      price: '$79', was: '$139', save: '43%', sites: '50 sites',  pop: false, link: 'https://rstheme.com/checkout?edd_action=add_to_cart&download_id=24012&edd_options%5Bprice_id%5D=8&discount=BFCM43' },
     ],
     lifetime: [
-      { name: 'Personal',    price: '$29',  was: '$39',  save: '34%', sites: '1 site',    pop: false },
-      { name: 'Team',        price: '$39',  was: '$99',  save: '70%', sites: '5 sites',   pop: true  },
-      { name: 'Developer',   price: '$59',  was: '$159', save: '75%', sites: '50 sites',  pop: false },
-      { name: 'Agency',      price: '$99',  was: '$199', save: '50%', sites: '100 sites', pop: false },
+      { name: 'Personal',    price: '$29',  was: '$39',  save: '25%', sites: '1 site',    pop: false, link: 'https://rstheme.com/checkout?edd_action=add_to_cart&download_id=24012&edd_options%5Bprice_id%5D=4&discount=BFCM34' },
+      { name: 'Team',        price: '$39',  was: '$99',  save: '60%', sites: '5 sites',   pop: true, link: 'https://rstheme.com/checkout?edd_action=add_to_cart&download_id=24012&edd_options%5Bprice_id%5D=5&discount=BFCM70'  },
+      { name: 'Developer',   price: '$59',  was: '$159', save: '62%', sites: '50 sites',  pop: false, link: 'https://rstheme.com/checkout?edd_action=add_to_cart&download_id=24012&edd_options%5Bprice_id%5D=6&discount=BFCD70' },
+      { name: 'Agency',      price: '$99',  was: '$199', save: '50%', sites: '100 sites', pop: false, link: 'https://rstheme.com/checkout?edd_action=add_to_cart&download_id=24012&edd_options%5Bprice_id%5D=9&discount=BFAL50' },
     ],
   };
   const features = [
@@ -68,7 +68,7 @@ const Pricing = () => {
                 </div>
               ))}
             </div>
-            <button className="prc-cta-btn" style={{ background: t.pop ? 'var(--brand-accent-500)' : 'var(--fg-1)' }}>Get License</button>
+            <a href={t.link} className="prc-cta-btn" style={{ background: t.pop ? 'var(--brand-accent-500)' : 'var(--fg-1)' }}>Get License</a>
           </div>
         ))}
       </div>
@@ -83,7 +83,7 @@ const Pricing = () => {
             <div className="prc-guarantee-desc">If WPUCS isn't the best fit, reach out — we'll happily refund 100% of your money.</div>
           </div>
         </div>
-        <Btn variant="primary" size="md">Free Download</Btn>
+        <Btn target="_blank" href="https://wordpress.org/plugins/ultimate-coming-soon/" variant="primary" size="md">Free Download</Btn>
       </div>
     </Section>
   );

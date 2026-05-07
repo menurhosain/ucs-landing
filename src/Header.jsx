@@ -5,9 +5,17 @@ const Header = () => {
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
-  const links = ['Templates', 'Features', 'Pricing', 'Reviews', 'Docs', 'Blog'];
-  return (
 
+  const links = [
+    { label: 'Templates', href: '#templates' },
+    { label: 'Features',  href: '#features'  },
+    { label: 'Pricing',   href: '#pricing'   },
+    { label: 'Reviews',   href: '#reviews'   },
+    { label: 'Docs',      href: 'https://wpucs.com/docs/rs-coming-soon-maintenance-plugin/' },
+    { label: 'Blog',      href: 'https://wpucs.com/blog/' },
+  ];
+
+  return (
     <header className="hdr-root" style={{
       background: scrolled ? 'rgba(250,251,247,.85)' : 'var(--bg-page)',
       backdropFilter: scrolled ? 'blur(12px)' : 'none',
@@ -17,15 +25,15 @@ const Header = () => {
         <Logo />
         <nav className="hdr-nav">
           {links.map(l => (
-            <a key={l} href={`#${l.toLowerCase()}`} className="hdr-nav-link">{l}</a>
+            <a key={l.label} href={l.href} className="hdr-nav-link">{l.label}</a>
           ))}
         </nav>
         <div className="hdr-actions">
-          <Btn variant="ghost" size="sm">Sign in</Btn>
-          <Btn variant="primary" size="sm">Buy Now</Btn>
+          <Btn href="#pricing" variant="primary" size="sm">Buy Now</Btn>
         </div>
       </div>
     </header>
   );
 };
+
 window.Header = Header;

@@ -3,7 +3,7 @@ const Footer = () => (
     <div className="ftr-inner">
       <div className="ftr-columns">
         <div className="ftr-brand">
-          <Logo dark/>
+          <Logo2 dark/>
           <p className="ftr-brand-p">
             WPUCS is part of <span className="ftr-brand-highlight">RSTheme</span>, makers of 100+ premium WordPress themes and plugins, trusted by 150,000+ customers worldwide.
           </p>
@@ -40,3 +40,6 @@ const Footer = () => (
   </footer>
 );
 window.Footer = Footer;
+
+
+

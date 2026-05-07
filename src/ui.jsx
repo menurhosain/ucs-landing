@@ -1,7 +1,7 @@
 // WPUCS Marketing — shared atoms & app shell
 const { useState } = React;
 
-const Btn = ({ children, variant = 'primary', size = 'md', onClick, style, ...rest }) => {
+const Btn = ({ children, variant = 'primary', size = 'md', style, ...rest }) => {
   const sizes = {
     sm: { padding: '8px 14px', fontSize: 13 },
     md: { padding: '14px 26px', fontSize: 15 },
@@ -14,7 +14,7 @@ const Btn = ({ children, variant = 'primary', size = 'md', onClick, style, ...re
     link:    { background: 'transparent', color: 'var(--brand-accent-700)', padding: '6px 0' },
   };
   return (
-    <button onClick={onClick}
+    <a 
       className="ui-btn"
       style={{ ...sizes[size], ...variants[variant], ...style }}
       onMouseDown={e => e.currentTarget.style.transform = 'scale(.98)'}
@@ -22,7 +22,7 @@ const Btn = ({ children, variant = 'primary', size = 'md', onClick, style, ...re
       onMouseLeave={e => e.currentTarget.style.transform = ''}
       {...rest}>
       {children}
-    </button>
+    </a>
   );
 };
 
@@ -53,10 +53,12 @@ const Section = ({ children, bg = 'var(--bg-page)', id, padded = true }) => (
 
 const Logo = ({ dark }) => (
   <div className="ui-logo">
-    <div className="ui-logo-icon">W</div>
-    <div className="ui-logo-text" style={{ color: dark ? '#fff' : 'var(--fg-1)' }}>
-      WPUCS<span className="ui-logo-dot">.</span>
-    </div>
+    <img src="/image/logo.png" alt="" />
+  </div>
+);
+const Logo2 = ({ dark }) => (
+  <div className="ui-logo">
+    <img src="/image/logo-dark.png" alt="" />
   </div>
 );
 

@@ -19,13 +19,13 @@
   --brand-accent-800: #1F187A;
 
   /* Secondary — Warm off-black with subtle plum undertone */
-  --brand-navy-50:   #F3F1EE;
-  --brand-navy-100:  #DAD5CD;
-  --brand-navy-200:  #B4ABA0;
-  --brand-navy-400:  #6E6356;
-  --brand-navy-600:  #3F362D;
-  --brand-navy-800:  #2A231C;   /* warm off-black, headings */
-  --brand-navy-900:  #1A1510;   /* footer / darkest */
+  --brand-navy-50:   #cbceee;
+  --brand-navy-100:  #9a9fdd;
+  --brand-navy-200:  #4d54b3;
+  --brand-navy-400:  #373c81;
+  --brand-navy-600:  #282c5f;
+  --brand-navy-800:  #13142c;   /* warm off-black, headings */
+  --brand-navy-900:  #0c0d1c;   /* footer / darkest */
 
   /* Accent — Soft butter (warmer than the old hi-vis yellow) */
   --brand-yellow-300: #F4E4B6;

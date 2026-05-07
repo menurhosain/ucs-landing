@@ -15,12 +15,12 @@ const Hero = () => (
           Hide your website until it's ready. Build an eye-catching page with the Block Editor — drag, drop, customize, and launch in minutes. No coding skills needed.
         </p>
         <div className="hero-cta-row">
-          <Btn variant="primary" size="lg">Free Download</Btn>
-          <Btn variant="ghost" size="lg">View Demos →</Btn>
+          <Btn target="_blank" href="https://wordpress.org/plugins/ultimate-coming-soon/" variant="primary" size="lg">Free Download</Btn>
+          <Btn href="#templates" variant="ghost" size="lg">View Demos <svg width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path></svg></Btn>
         </div>
         <div className="hero-social-proof">
-          <span><b className="hero-stat-num">8,000+</b> happy users</span>
-          <span><b className="hero-stat-num">41,017+</b> downloads</span>
+          <span><b className="hero-stat-num">9,000+</b> happy users</span>
+          <span><b className="hero-stat-num">56,737+</b> downloads</span>
           <span className="hero-rating"><b>★★★★★</b> 4.9 rated</span>
         </div>
       </div>
@@ -38,20 +38,20 @@ const Hero = () => (
             <div className="hero-dashboard-grid">
               <aside className="hero-sidebar">
                 <div className="hero-sidebar-title">WPUCS</div>
-                {['Dashboard', 'Templates', 'Design', 'Countdown', 'SEO', 'Newsletter'].map((l, i) => (
+                {['Dashboard', 'Templates', 'Content', 'Appearance', 'Social', 'contact', 'Newsletter', 'Count Down', 'SEO', 'Advance settings', 'Translation'].map((l, i) => (
                   <div key={l} className="hero-sidebar-item" style={{
-                    background: i === 1 ? 'rgba(34,197,94,.18)' : 'transparent',
-                    color: i === 1 ? 'var(--brand-accent-300)' : 'rgba(255,255,255,.7)',
+                    background: i === 1 ? 'var(--brand-accent-600)' : 'transparent',
+                    color: i === 1 ? 'var(--white)' : 'rgba(255,255,255,.7)',
                   }}>{l}</div>
                 ))}
               </aside>
               <div className="hero-dashboard-content">
                 <div className="hero-template-header">
                   <div className="hero-template-title">Choose a template</div>
-                  <Pill tone="new">29 Pro</Pill>
+                  <Pill tone="new">30 Pro</Pill>
                 </div>
                 <div className="hero-template-grid">
-                  {['#7AAE63','#D9A75A','#5FA9C4','#A88AC9','#E08263','#6CC2A3'].map((c, i) => (
+                  {['#7AAE63','#D9A75A','#5FA9C4','#A88AC9','#E08263','#6CC2A3','#f0a93a','#bdb3a4','#1e88e5'].map((c, i) => (
                     <div key={i} className="hero-tmpl-item" style={{
                       background: `linear-gradient(160deg, ${c}, ${c}cc)`,
                       border: i === 0 ? '2px solid var(--brand-accent-500)' : '1px solid var(--line-100)',
