@@ -47,7 +47,7 @@ const Header = () => {
             ))}
           </nav>
           <div className="hdr-actions">
-            <Btn href="#pricing" variant="primary" size="sm">Buy Now</Btn>
+            <Btn href="#pricing" variant="primary" size="md">Buy Now</Btn>
             <button
               className={`hdr-hamburger${menuOpen ? ' open' : ''}`}
               onClick={() => setMenuOpen(v => !v)}

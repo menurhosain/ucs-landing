@@ -1,5 +1,5 @@
 const Templates = () => {
-  const cats = ['All', 'Agency', 'Business', 'Construction', 'Creative', 'Restaurant', 'Gardening', 'Marketing'];
+  const cats = ['All', 'Agency', 'Business', 'Construction', 'Creative', 'Restaurant', 'Gardening', 'Marketing', 'Slider'];
   const [active, setActive] = React.useState('All');
   const items = [
     { t: 'Launching',         c: 'Creative',     img: 'launching',     hue: '#5b6ee5', bg: '#1e2554', link: 'https://demo.wpucs.com/launching' },
@@ -49,7 +49,7 @@ const Templates = () => {
       <div className="tmpl-filters">
         {cats.map(c => (
           <button key={c} onClick={() => setActive(c)} className="tmpl-filter-btn" style={{
-            background: active === c ? 'var(--brand-navy-800)' : '#fff',
+            background: active === c ? 'var(--brand-accent-500)' : '#fff',
             color: active === c ? '#fff' : 'var(--fg-2)',
             border: active === c ? 0 : '1px solid var(--line-200)',
           }}>{c}</button>
@@ -62,15 +62,17 @@ const Templates = () => {
             onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = 'var(--shadow-lg)'; }}
             onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = 'var(--shadow-sm)'; }}>
             <div className="tmpl-img-wrap" style={{ background: `linear-gradient(165deg, ${t.bg}, ${t.hue}cc 60%, ${t.hue})` }}>
-              <img src={`image/preview/${t.img}.jpg`} alt={t.t}
-                onError={e => { e.currentTarget.style.display = 'none'; }}
-                className="tmpl-img"/>
+              <a target="_blank" href={t.link}>
+                <img src={`image/preview/${t.img}.jpg`} alt={t.t}
+                  onError={e => { e.currentTarget.style.display = 'none'; }}
+                  className="tmpl-img"/>
+              </a>
               <span className="tmpl-badge">{i % 5 === 0 ? 'FREE' : 'PRO'}</span>
             </div>
             <div className="tmpl-footer">
               <div>
                 <div className="tmpl-cat">{t.c}</div>
-                <div className="tmpl-name">{t.t}</div>
+                <div className="tmpl-name"><a target="_blank" href={t.link}>{t.t}</a></div>
               </div>
               <a target="_blank" href={t.link} className="tmpl-preview-btn">Preview</a>
             </div>

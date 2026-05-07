@@ -4,7 +4,7 @@ const { useState } = React;
 const Btn = ({ children, variant = 'primary', size = 'md', style, ...rest }) => {
   const sizes = {
     sm: { padding: '8px 14px', fontSize: 13 },
-    md: { padding: '14px 26px', fontSize: 15 },
+    md: { padding: '12px 26px', fontSize: 15 },
     lg: { padding: '18px 34px', fontSize: 16 },
   };
   const variants = {

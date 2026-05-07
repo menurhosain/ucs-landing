@@ -1,5 +1,5 @@
 const Hero = () => (
-  <Section padded>
+  <Section padded={false}>
     <div className="hero-grid">
       <div className="hero-leftbar">
         <div className="hero-badge">

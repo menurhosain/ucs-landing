@@ -31,7 +31,7 @@
   }
 }
 @media (max-width: 1024px) {
-  .stats-grid  { grid-template-columns: repeat(3,1fr); }
+  .stats-grid  { grid-template-columns: repeat(3,1fr); padding: 80px 24px;}
   .hero-grid { grid-template-columns: 1fr; gap: 40px; }
   .hero-h1{
     font-size:5vw;
@@ -75,6 +75,9 @@
   }
   .hero-float-badge{
     left: 215px;
+  }
+  .reviews-section{
+    padding: 80px 24px;
   }
 }
 
@@ -221,5 +224,8 @@
   }
   .stats-value{
     font-size: 26px;
+  }
+  .reviews-section{
+    padding: 64px 24px;
   }
 }

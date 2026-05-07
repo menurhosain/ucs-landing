@@ -5,7 +5,7 @@ const HowItWorks = () => {
     { n: '03', t: 'Toggle live & launch', d: 'Choose Coming Soon, Maintenance, Under Construction, or Redirect Mode. Publish in one click.' },
   ];
   return (
-    <Section  bg="var(--cream-100)">
+    <Section  bg="var(--bg-page)">
       <div className="hiw-header">
         <Eyebrow>How it works</Eyebrow>
         <h2 className="hiw-h2">Three steps. About 90 seconds.</h2>
@@ -30,7 +30,7 @@ const UseCases = () => {
     { t: 'Product launches', d: 'Build hype with countdowns and reveal pages.', tone: 'var(--brand-navy-800)' },
   ];
   return (
-    <Section bg="var(--bg-page)">
+    <Section bg="var(--cream-100)">
       <div className="ucs-grid">
         <div>
           <Eyebrow>Use cases</Eyebrow>
@@ -61,8 +61,8 @@ const MidCTA = () => (
         <p className="mcta-p">Create &amp; publish pages, track conversions, and start collecting leads in minutes.</p>
       </div>
       <div className="mcta-actions">
-        <Btn target="_blank" href="https://wordpress.org/plugins/ultimate-coming-soon/" variant="primary" size="lg">Free Download</Btn>
-        <Btn href="#pricing" size="lg" style={{ background: 'transparent', color: '#fff', border: '1px solid rgba(255,255,255,.25)' }}>See pricing <svg width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path></svg></Btn>
+        <Btn target="_blank" style={{ width: '100%' }} href="https://wordpress.org/plugins/ultimate-coming-soon/" variant="primary" size="lg">Free Download</Btn>
+        <Btn href="#pricing" size="lg" style={{ background: '#fff', color: '#13142c', border: '1px solid rgba(255,255,255,.25)', width: '100%' }}>See pricing <svg width="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#13142c"><path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path></svg></Btn>
       </div>
     </div>
   </Section>
